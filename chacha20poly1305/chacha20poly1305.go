@@ -3,6 +3,7 @@ package fastencrypt
 import (
 	"crypto/rand"
 	"io"
+	"golang.org/x/crypto/chacha20poly1305"
 
 )
 
