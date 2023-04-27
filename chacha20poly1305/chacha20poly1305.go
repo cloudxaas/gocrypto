@@ -5,7 +5,6 @@ import (
 	"crypto/rand"
 	"io"
 
-	"golang.org/x/crypto/chacha20poly1305"
 )
 
 // ChaCha20Poly1305Encrypt encrypts the given plaintext with the given key and nonce
