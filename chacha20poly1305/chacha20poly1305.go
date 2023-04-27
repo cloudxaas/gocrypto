@@ -1,4 +1,4 @@
-package encryption
+package fastencrypt
 
 import (
 	"crypto/cipher"
