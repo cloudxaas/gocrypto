@@ -1,7 +1,6 @@
 package fastencrypt
 
 import (
-	"crypto/cipher"
 	"crypto/rand"
 	"io"
 
