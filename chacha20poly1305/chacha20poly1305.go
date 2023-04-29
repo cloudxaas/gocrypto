@@ -1,8 +1,9 @@
 package fastencrypt
 
 import (
-	"crypto/rand"
 	"io"
+	
+	"github.com/lukechampine/frand"
 	"golang.org/x/crypto/chacha20poly1305"
 
 )
@@ -43,9 +44,5 @@ func ChaCha20Poly1305Decrypt(key, nonce, ciphertext []byte) ([]byte, error) {
 
 // GenerateNonce generates a random 12-byte nonce using the crypto/rand package.
 func GenerateNonce() ([]byte, error) {
-	nonce := make([]byte, 12)
-	if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
-		return nil, err
-	}
-	return nonce, nil
+	return frand.Bytes(32)
 }
