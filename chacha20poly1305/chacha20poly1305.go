@@ -43,6 +43,6 @@ func ChaCha20Poly1305Decrypt(key, nonce, ciphertext []byte) ([]byte, error) {
 }
 
 // GenerateNonce generates a random 12-byte nonce using the crypto/rand package.
-func GenerateNonce() ([]byte, error) {
+func GenerateNonce() []byte {
 	return frand.Bytes(32)
 }
