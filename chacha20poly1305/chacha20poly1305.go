@@ -1,7 +1,7 @@
 package fastencrypt
 
 import (
-	"io"
+	//"io"
 	
 	"lukechampine.com/frand"
 	"golang.org/x/crypto/chacha20poly1305"
