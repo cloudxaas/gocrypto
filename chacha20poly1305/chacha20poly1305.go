@@ -12,7 +12,7 @@ import (
 // using the ChaCha20-Poly1305 AEAD cipher. The ciphertext is returned.
 // The key length must be 32 bytes, and the nonce length must be 12 bytes.
 func ChaCha20Poly1305Encrypt(key, nonce, plaintext []byte) ([]byte, error) {
-	aead, err := chacha20poly1305.NewX(key)
+	aead, err := chacha20poly1305.New(key)
 	if err != nil {
 		return nil, err
 	}
@@ -28,7 +28,7 @@ func ChaCha20Poly1305Encrypt(key, nonce, plaintext []byte) ([]byte, error) {
 // using the ChaCha20-Poly1305 AEAD cipher. The plaintext is returned.
 // The key length must be 32 bytes, and the nonce length must be 12 bytes.
 func ChaCha20Poly1305Decrypt(key, nonce, ciphertext []byte) ([]byte, error) {
-	aead, err := chacha20poly1305.NewX(key)
+	aead, err := chacha20poly1305.New(key)
 	if err != nil {
 		return nil, err
 	}
